@@ -1,6 +1,6 @@
-Практичка в написание сайтов на PHP с использованием фреймворков и без них.
+Небольшой форум без использования фреймворка. Админка не доделана.
 -----------------------------------
 ***  
-Practice in writing websites in PHP using frameworks and without them.
+A small forum without using the framework. The admin panel is not finished.
 -----------------------------------
 
