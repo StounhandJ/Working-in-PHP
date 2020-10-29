@@ -36,13 +36,7 @@ class TimeTable extends AModel  //Модель для работы с распи
     if ($data['code']!=200) {
       return [];
     }
-    $mas=json_decode($data['data'][0][0]);
-    $out=[];
-    $week=['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'];
-    foreach ($mas as $key=>$val) {
-        $out[$week[$key]]=$val;
-    }
-    return $out;
+    return json_decode($data['data'][0][0]);
   }
 
   function createTimeTable() //Рекомендуется вызов в ручную
@@ -62,12 +56,13 @@ class TimeTable extends AModel  //Модель для работы с распи
         $tg2=$html2->find('.tab-pane'); //Группы
 
         foreach ($tg2 as $value2) {
+          $dayCount=0;
           $html3 = str_get_html($value2->innertext);
           $tg3=$html3->find('tbody');  //Дни
-          $courseName=str_replace(['<h3>','</h3>'],'',$html3->find('h3')[0]);
+          $tg3_2=$html3->find('thead');  //Дни
+          $courseName=str_replace(['<h3>','</h3>','Группа '],'',$html3->find('h3')[0]);
           $course=[];
           unset($tg3[0]);
-
           foreach ($tg3 as $value3) {
             $day=[];
             $str=explode('<tr>',$value3->innertext); //Отдельная пара
@@ -85,8 +80,8 @@ class TimeTable extends AModel  //Модель для работы с распи
               {
                 $lesson=[
                   "Account"=>$str2[1],
-                  "les"=>$str2[2],
-                  "Teacher"=>$str2[3]
+                  "les"=>trim($str2[2]),
+                  "Teacher"=>trim($str2[3])
                 ];
               }
               else{ //Если числитель и знаменатель
@@ -96,13 +91,17 @@ class TimeTable extends AModel  //Модель для работы с распи
                 $tg6=$html5->find('div'); //Препод
                 $lesson=[
                   "Account"=>$str2[1],
-                  "les"=>[$tg5[0]->innertext,$tg5[1]->innertext],
-                  "Teacher"=>[$tg6[0]->innertext,$tg6[1]->innertext]
+                  "les"=>[trim($tg5[0]->innertext),trim($tg5[1]->innertext)],
+                  "Teacher"=>[trim($tg6[0]->innertext),trim($tg6[1]->innertext)]
                 ];
               }
               $day[]=$lesson;
             }
-            $course[]=$day;
+
+            $day_name=str_replace(['<tr><th colspan="3"><h4>','<span style="color: rgba(43,55,61, 0.6); margin-left: 20px;">','</span></h4></th></tr>'],'',$tg3_2[$dayCount]->innertext);
+            $course[$day_name]=$day;
+            $dayCount=$dayCount+1;
+
           }
           $data=[
             ':time'=>time(),
@@ -113,7 +112,7 @@ class TimeTable extends AModel  //Модель для работы с распи
           $this->db->request("INSERT INTO `timetable`(`department`, `grouping`, `timetable`, `update date`, `create date`) VALUES (:departmentName,:courseName,:data,:time,:time)",$data);
         }
       }
-  }
+    }
 }
 
 
