@@ -59,7 +59,7 @@ class TimeTable extends AModel  //Модель для работы с распи
           $dayCount=0;
           $html3 = str_get_html($value2->innertext);
           $tg3=$html3->find('tbody');  //Дни
-          $tg3_2=$html3->find('thead');  //Дни
+          $tg3_2=$html3->find('thead h4');  //Дни
           $courseName=str_replace(['<h3>','</h3>','Группа '],'',$html3->find('h3')[0]);
           $course=[];
           unset($tg3[0]);
@@ -97,8 +97,15 @@ class TimeTable extends AModel  //Модель для работы с распи
               }
               $day[]=$lesson;
             }
-
-            $day_name=str_replace(['<tr><th colspan="3"><h4>','<span style="color: rgba(43,55,61, 0.6); margin-left: 20px;">','</span></h4></th></tr>'],'',$tg3_2[$dayCount]->innertext);
+            $day_name=str_replace(['<span style="color: rgba(43,55,61, 0.6); margin-left: 20px;">','</span>'],'',$tg3_2[$dayCount]->innertext);
+            $day_name=str_replace('(Нежинская)',' (Нежинская)',$day_name);
+            $day_name=str_replace('(Нахимовский)',' (Нежинская)',$day_name);
+            $day_name=str_replace('ПОНЕДЕЛЬНИК',' Понедельник',$day_name);
+            $day_name=str_replace('ВТОРНИК',' Вторник',$day_name);
+            $day_name=str_replace('СРЕДА',' Среда',$day_name);
+            $day_name=str_replace('ЧЕТВЕРГ',' Четверг',$day_name);
+            $day_name=str_replace('ПЯТНИЦА',' Пятница',$day_name);
+            $day_name=str_replace('СУББОТА',' Суббота',$day_name);
             $course[$day_name]=$day;
             $dayCount=$dayCount+1;
 
@@ -113,6 +120,7 @@ class TimeTable extends AModel  //Модель для работы с распи
         }
       }
     }
+
 }
 
 

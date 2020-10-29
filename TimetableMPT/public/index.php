@@ -5,8 +5,6 @@ use Slim\Routing\RouteCollectorProxy;
 use Slim\Factory\AppFactory;
 require __DIR__ . '/../vendor/autoload.php';
 
-//phpinfo();
-
 function autoload ($class) { //Загрузка файлов
     $namespase = '';
     $dir = __DIR__.'/../';
