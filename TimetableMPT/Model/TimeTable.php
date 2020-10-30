@@ -39,6 +39,54 @@ class TimeTable extends AModel  //Модель для работы с распи
     return json_decode($data['data'][0][0]);
   }
 
+  function getReplacementsGroup($group)
+  {
+    $data=$this->db->request('SELECT `update_date` FROM `timetable` WHERE `grouping`=:group',[':group'=>$group]);
+    if ($data['data'][0][0]+60*10<time()) {
+      $this->updateReplacements();
+    }
+    $data=$this->db->request('SELECT `replacements` FROM `timetable` WHERE `grouping`=:group',[':group'=>$group]);
+    if ($data['code']!=200) {
+      return ["not found"];
+    }
+    return json_decode($data['data'][0][0]);
+  }
+
+  function updateReplacements() //Обновляет спсок замен
+  {
+      include __DIR__ . '/../Libraries/simpl/simple_html_dom.php';
+      $html = file_get_html('C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\Model\test.html'); //----------------Путь к документу------------------------
+      $htm = str_get_html($html->find('.container')[1])->find('div')[6];
+      $htm = explode('<hr>',$htm->innertext()); //Изменения в расписание по дням
+      unset($htm[count($htm)-1]);
+      $this->db->request("UPDATE `timetable` SET `replacements`='[]' ,`update_date`=:time WHERE 1",[':time'=>time()]);
+      $allReplacements =[];
+      foreach ($htm as $var) {
+        $group =[];
+        $dayName = str_replace(['Замены на ','<b>','</b>'],'',str_get_html($var)->find("h4")[0]->innertext());
+        $replacements = str_get_html($var)->find(".table");
+        foreach ($replacements as $replacement) {
+          $day = [];
+          $groupName = str_replace(['<b>','</b>'],'',str_get_html($replacement)->find("b")[0]);
+          $lesson = str_get_html($replacement)->find("tr");
+          unset($lesson[0]);
+          foreach ($lesson as $detel) {
+            $mas = str_get_html($detel)->find("td");
+            $lesson=[
+              "Account"=>$mas[0]->innertext(),
+              "was"=>trim($mas[1]->innertext()),
+              "become"=>trim($mas[2]->innertext())
+            ];
+            $day[]=$lesson;
+          }
+          $allReplacements[$groupName][]=['day'=>$dayName,'replacements'=>$day];
+        }
+      }
+      foreach ($allReplacements as $key=>$value) {
+        $this->db->request("UPDATE `timetable` SET `replacements`=:replace WHERE `grouping`=:groupName",[':groupName'=>$key,'replace'=>json_encode($value,JSON_UNESCAPED_UNICODE)]);
+      }
+    }
+
   function createTimeTable() //Рекомендуется вызов в ручную
   //Создает записи в базе данных всего расписани из обрезаного html документа страницы с расписанием
   //Перед началом надо сбросить все расписание в базе
@@ -120,6 +168,8 @@ class TimeTable extends AModel  //Модель для работы с распи
         }
       }
     }
+
+
 
 }
 
