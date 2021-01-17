@@ -100,4 +100,17 @@ class Area
         }
     }
 
+
+    function getFigure($x, $y)
+    {
+        foreach ($this->area as $item)
+        {
+            if ($item["coordinates"][0] == $x && $item["coordinates"][1] == $y)
+            {
+                $path = '\Libraries\Chess\Figure\\'.$item["chessPiece"];
+                return new $path($item["coordinates"][0], $item["coordinates"][1], $item["player"],$this->area);
+            }
+        }
+    }
+
 }

@@ -18,6 +18,7 @@ function autoload ($class) { //Загрузка файлов
       $filename=$dir.$namespase.DIRECTORY_SEPARATOR;
     }
     $filename.=$classname.'.php';
+    $filename = str_replace("\\","/",$filename);
     if(file_exists($filename)) {
         require $filename;
     }
@@ -31,7 +32,7 @@ $errorMiddleware= $app->addErrorMiddleware(true, true, true);
 $errorMiddleware->setDefaultErrorHandler(function () use ($app) {
         $response = $app->getResponseFactory()->createResponse();
         $view = new \Libraries\View($response);
-        return$view->error404();
+        return $view->renderingAPI(404);
 });
         //-------------------------------//
 
@@ -39,7 +40,10 @@ $errorMiddleware->setDefaultErrorHandler(function () use ($app) {
             //---------API---------//
 
 $app->group('/api', function (RouteCollectorProxy $group) {
-
+    $group->get('',"\Controller\apiController:index");
+    $group->get('/creatGame',"\Controller\apiController:creatGame");
+    $group->get('/GameInfo',"\Controller\apiController:GameInfo");
+    $group->post('/moveFigure',"\Controller\apiController:moveFigure");
 });
 
             //-------------------------//

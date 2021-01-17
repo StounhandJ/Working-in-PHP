@@ -5,6 +5,7 @@ class AController
 {
   protected $request;
   protected $response;
+  protected $ChessDB;
   public $view;
   public $GET;
   public $POST;
