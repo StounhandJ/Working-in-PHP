@@ -1,25 +1,51 @@
 <?php
 namespace Controller;
 
+use Slim\Psr7\Request;
+use Slim\Psr7\Response;
+use Libraries\View;
+
 class AController
 {
+    /**
+   * @var Request
+   */
   protected $request;
-  protected $response;
-  protected $ChessDB;
-  public $view;
-  public $GET;
-  public $POST;
-  public $FILE;
-  public $COOKIE;
-  public $SERVER;
-  public $InformationM;
-  public $GoodsM;
-  public $MaterialsM;
 
-  function __construct()
-  {
-  	
-  }
+  /**
+   * @var Response
+   */
+  protected $response;
+
+  /**
+   * @var View
+   */
+  public $view;
+
+  /**
+   * @var array
+   */
+  public $GET;
+
+  /**
+   * @var array
+   */
+  public $POST;
+
+  /**
+   * @var array
+   */
+  public $FILE;
+
+  /**
+   * @var array
+   */
+  public $COOKIE;
+
+  /**
+   * @var array
+   */
+  public $SERVER;
   
   function set_request($request)
   {
@@ -36,12 +62,12 @@ class AController
   	$this->response = $response;
   }
   
-  function get_request()
+  function get_request(): Request
   {
   	return $this->request;
   }
   
-  function get_response()
+  function get_response(): Response
   {
   	return $this->response;
   }
@@ -50,8 +76,7 @@ class AController
   {
   	$this->set_request($request);
   	$this->set_response($response);
-  	$this->view = new \Libraries\View($this->response);
-  	$this->ChessDB = new \Model\ChessDB;
+  	$this->view = new View($this->response);
   }
 
 }

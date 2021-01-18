@@ -1,12 +1,17 @@
 <?php
 namespace model;
 
+use Libraries\DataBase;
+
 class AModel  //главный класс модели
 {
-    protected $db;
+    /**
+     * @var DataBase
+     */
+    public $db;
 
-    function connect() //Подключение к базк
+    function __construct() //Подключение к базк
     {
-        $this->db= new \Libraries\DataBase;
+        $this->db = new DataBase;
     }
 }

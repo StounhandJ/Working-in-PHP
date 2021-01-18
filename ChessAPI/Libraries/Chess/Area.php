@@ -3,8 +3,22 @@
 namespace Libraries\Chess;
 
 
-class Area
+class Area implements Interfaces\AreaInterface
 {
+    /**
+     * @var array $area
+     */
+    public $area;
+
+    /**
+     * @var string $area
+     */
+    public $event;
+
+    /**
+     * @var bool $area
+     */
+    public $endGame;
 
     function __construct($area)
     {
@@ -39,7 +53,8 @@ class Area
         }
     }
 
-    function checkWhoGoCage($oldX, $oldY, $x, $y, $player){
+    function checkWhoGoCage($oldX, $oldY, $x, $y, $player):bool
+    {
         foreach ($this->area as $mas) {
             if ($mas["player"] != $player)
             {
@@ -105,7 +120,7 @@ class Area
     }
 
 
-    function getFigure($x, $y)
+    function getFigure($x, $y):?ChessPiece
     {
         foreach ($this->area as $item)
         {
@@ -115,6 +130,7 @@ class Area
                 return new $path($item["coordinates"][0], $item["coordinates"][1], $item["player"],$this->area);
             }
         }
+        return null;
     }
 
 }

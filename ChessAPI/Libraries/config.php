@@ -1,7 +1,7 @@
 <?php
 return [
 	'host' => 'localhost',
-	'base' => 'cn61693_shope',
-	'user' => 'cn61693_shope',
+	'base' => 'ci17950_vk',
+	'user' => 'ci17950_vk',
 	'password' => '7157725',
 ];

@@ -1,15 +1,19 @@
 <?php
 namespace Model;
 
-
-class ChessDB extends AModel //Работа с данными игры
+/**
+ * Class ChessDB
+ * @package Model
+ *
+ * Работа с данными игры *
+ */
+class ChessDB extends AModel
 {
-    function __construct()
-    {
-        $this->connect();
-    }
-
-    function creatGame()
+    /**Создает новую шахматную партию
+     *
+     * @return array
+     */
+    function creatGame(): array
     {
         $playerOne = hash("md5", mt_rand(0, 10000));
 		$playerTwo = hash("md5", mt_rand(0, 10000));
@@ -19,7 +23,12 @@ class ChessDB extends AModel //Работа с данными игры
 		return ["playerOne"=>$playerOne,"playerTwo"=>$playerTwo,"area"=>$area,"gameID"=>$gameID];
     }
 
-    function getGame($gameID)
+    /**Возвращает основную информаци о игре
+     *
+     * @param int $gameID id игры
+     * @return array
+     */
+    function getGame(int $gameID): array
     {
         $game = $this->db->request("SELECT `area`,`log`,`turn`,`update_date`,`create_date` FROM `Games` WHERE `id`=:id",[":id"=>$gameID]);
         if ($game["code"]!=200) return ["success"=>false,"data"=>null];
@@ -29,24 +38,49 @@ class ChessDB extends AModel //Работа с данными игры
         return ["success"=>true,"data"=>$game["data"][0]];
     }
 
-    function updateGame($gameID,$area,$log,$player)
+    /**Обновляет поле, лог и дату последнего события
+     *
+     * @param int $gameID id игры
+     * @param array $area поле иггры
+     * @param array $log лог действий
+     * @param int $player номер игрока
+     */
+    function updateGame(int $gameID, array $area, array $log, int $player)
     {
         $player = $player==1?2:1;
         $this->db->request("UPDATE `Games` SET `area`=:area,`log`=:log,`turn`=:player,`update_date`=:time WHERE `id`=:id",[":area"=>json_encode($area),":log"=>json_encode($log),":id"=>$gameID,":player"=>$player,":time"=>time()]);
     }
 
-    function checkKey($gameID,$key)
+    /**Проверка ключа пользователя
+     *
+     * @param int $gameID id игры
+     * @param string $key ключ пользователя
+     * @return bool
+     */
+    function checkKey(int $gameID, $key): bool
     {
         return $this->db->request("SELECT `playerOne`,`playerTwo` FROM `Games` WHERE `id`=:id AND (`playerOne`=:key OR `playerTwo`=:key)",[":id"=>$gameID,":key"=>$key])["code"]==200;
     }
 
-    function checkTurn($gameID,$player)
+    /**Проверка может ли данные игрок ходить сейчас
+     *
+     * @param int $gameID id игры
+     * @param int $player номер игрока
+     * @return bool
+     */
+    function checkTurn(int $gameID, int $player): bool
     {
         $respond = $this->db->request("SELECT `turn` FROM `Games` WHERE `id`=:id",[":id"=>$gameID]);
         return $respond["code"]==200 && $respond["data"][0]["turn"]==$player;
     }
 
-    function getPlayer($gameID,$key)
+    /**Возвращает номер игрока по его ключу
+     *
+     * @param int $gameID id игры
+     * @param string $key ключ пользователя
+     * @return int
+     */
+    function getPlayer(int $gameID,string $key): int
     {
         return isset($this->db->request("SELECT `id` FROM `Games` WHERE `id`=:id AND `playerOne`=:key",[":id"=>$gameID,":key"=>$key])["data"])?1:2;
     }

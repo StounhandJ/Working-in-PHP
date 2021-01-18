@@ -4,7 +4,10 @@ namespace Libraries\Chess\Figure;
 
 class Bishop extends \Libraries\Chess\ChessPiece
 {
-    function check($CheckShah = True)
+    /**
+     * {@inheritdoc}
+     */
+    function check($CheckShah = True):bool
     {
         $posX = abs($this->oldX - $this->newX);
         $posY = abs($this->oldY - $this->newY);

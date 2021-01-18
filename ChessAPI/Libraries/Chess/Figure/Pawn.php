@@ -4,7 +4,10 @@ namespace Libraries\Chess\Figure;
 
 class Pawn extends \Libraries\Chess\ChessPiece
 {
-    function check($CheckShah = True)
+    /**
+     * {@inheritdoc}
+     */
+    function check($CheckShah = True):bool
     {
         $interim = $this->oldY - $this->newY;
         $posX = abs($this->oldX - $this->newX);

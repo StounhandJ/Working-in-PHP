@@ -2,9 +2,40 @@
 namespace Libraries\Chess;
 
 
-class ChessPiece
+class ChessPiece implements Interfaces\ChessPieceInterface
 {
-    function __construct($x, $y, $player,$area)
+    /**
+     * @var int
+     */
+    public $oldX;
+
+    /**
+     * @var int
+     */
+    public $oldY;
+
+    /**
+     * @var int
+     */
+    public $newX;
+
+    /**
+     * @var int
+     */
+    public $newY;
+
+    /**
+     * @var int
+     */
+    public $player;
+
+    /**
+     * @var Area
+     */
+    public $Area;
+
+
+    function __construct($x, $y, $player, $area)
     {
         $this->oldX = $x;
         $this->oldY = $y;
@@ -14,13 +45,10 @@ class ChessPiece
         $this->Area = new \Libraries\Chess\Area($area);
     }
 
-    function move($x, $y)
-    {
-        if ($x > 7 || $x < 0 || $y > 7 || $y < 0)
-        {
-            return False;
-        }
 
+    function move($x, $y): bool
+    {
+        if ($x > 7 || $x < 0 || $y > 7 || $y < 0) return False;
         $this->newX = $x;
         $this->newY = $y;
         $this->Area->checkEnd($this->player, $Checkmate=True);
@@ -36,7 +64,8 @@ class ChessPiece
         return False;
     }
 
-    private function checkRoadTwo($startX, $startY, $endX, $endY, $x, $y)
+
+    public function checkRoadTwo($startX, $startY, $endX, $endY, $x, $y): bool
     {
         if ($x == $endX && $y == $endY) return True;
         $PX = ($endX - $startX);
@@ -50,7 +79,8 @@ class ChessPiece
         return True;
     }
 
-    function checkRoad()
+
+    function checkRoad(): bool
     {
         foreach ($this->Area->area as $mas)
         {
@@ -93,7 +123,8 @@ class ChessPiece
         return True;
     }
 
-    function checkEnemyFigure($x, $y)
+
+    function checkEnemyFigure($x, $y): bool
     {
         foreach ($this->Area->area as $mas)
         {
@@ -105,7 +136,8 @@ class ChessPiece
         return False;
     }
 
-    function checkFriendlyFigure($x, $y)
+
+    function checkFriendlyFigure($x, $y): bool
     {
         foreach ($this->Area->area as $mas)
         {
@@ -117,7 +149,8 @@ class ChessPiece
         return False;
     }
 
-    function getPossibleMoves()
+
+    function getPossibleMoves(): array
     {
         $mas = [];
         $newX = $this->newX;
@@ -136,7 +169,8 @@ class ChessPiece
         return $mas;
     }
 
-    function checkShahGame()
+
+    function checkShahGame(): bool
     {
         $areaL = $this->Area;
         if ($this->checkEnemyFigure($this->newX, $this->newY)){$areaL->deletePiece($this->newX, $this->newY);}
@@ -145,8 +179,9 @@ class ChessPiece
         return $areaL->event != "";
     }
 
-    function check($CheckShah=True)
+    public function check($CheckShah = True): bool
     {
-        return False;
+        return false;
+        // TODO: Implement check() method.
     }
 }

@@ -38,12 +38,58 @@ $errorMiddleware->setDefaultErrorHandler(function () use ($app) {
 
 
             //---------API---------//
-
+$app->get("/",function(Request $request, Response $response, array $args)
+{
+    $request->getQueryParams();
+    $response->getBody()->write("<h1 style='text-align: center'>ChessAPI</h1><h2 style='color:red'>Сень, если нужен магазин напиши в ВК");
+    return $response
+          ->withHeader('Content-Type', 'text/html')
+          ->withStatus(200);
+});
 $app->group('/api', function (RouteCollectorProxy $group) {
+
+
+    /** (GET)Пусто - позже документация
+     *
+     * Не принимает параметров
+     */
     $group->get('',"\Controller\apiController:index");
+
+
+    /** (GET)Создает новую игру
+     *
+     * Не принимает параметров
+     */
     $group->get('/creatGame',"\Controller\apiController:creatGame");
+
+
+    /** (GET)Возвращает основную информацию о игре
+     *
+     * int gameID - id игры
+     */
     $group->get('/GameInfo',"\Controller\apiController:GameInfo");
+
+
+    /** (GET)Возвращает все возможные ходы для фигуры по координатам
+     *
+     * int x - координаты фигуры по X
+     * int y - координаты фигуры по Y
+     *         OR array data[x,y]- координаты фигуры по X и Y
+     * int gameID - id игры
+     */
     $group->get('/getPossibleMoves',"\Controller\apiController:getPossibleMoves");
+
+
+    /** (POST)Перемещает фигуру с начальной позиции на следующую
+     *
+     * int oldX - старые координаты фигуры по X
+     * int oldY - старые координаты фигуры по Y
+     * int newX - новы координаты фигуры по X
+     * int newY - новы координаты фигуры по Y
+     *          OR array data[oldX, oldY, newX, newY]- координаты фигуры по X и Y
+     * string key - уникальный ключ игрока
+     * int gameID - id игры
+     */
     $group->post('/moveFigure',"\Controller\apiController:moveFigure");
 });
 
