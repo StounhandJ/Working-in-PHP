@@ -38,18 +38,16 @@ class ChessPiece
 
     private function checkRoadTwo($startX, $startY, $endX, $endY, $x, $y)
     {
-        if ($x == $endX && $y == $endY)
+        if ($x == $endX && $y == $endY) return True;
+        $PX = ($endX - $startX);
+        $PY = ($endY - $startY);
+        $dotProduct = ($x - $startX) * ($endX - $startX) + ($y - $startY) * ($endY - $startY);
+        $squaredLength = ($endX - $startX) * ($endX - $startX) + ($endY - $startY) * ($endY - $startY);
+        if ( (($x - $startX)/$PX == ($y - $startY) / $PY) && !($dotProduct < 0 or $dotProduct > $squaredLength) && (($startX != $x) && ($startY != $y)) )
         {
-            $PX = ($endX - $startX);
-            $PY = ($endY - $startY);
-            $dotProduct = ($x - $startX) * ($endX - $startX) + ($y - $startY) * ($endY - $startY);
-            $squaredLength = ($endX - $startX) * ($endX - $startX) + ($endY - $startY) * ($endY - $startY);
-            if ( (($x - $startX)/$PX == ($y - $startY) / $PY) && !($dotProduct < 0 or $dotProduct > $squaredLength) && (($startX != $x) && ($startY != $y)) )
-            {
-                return False;
-            }
-            return True;
+            return False;
         }
+        return True;
     }
 
     function checkRoad()
@@ -124,9 +122,9 @@ class ChessPiece
         $mas = [];
         $newX = $this->newX;
         $newY = $this->newY;
-        for ($x=0;$x<9;$x++)
+        for ($x=0;$x<8;$x++)
         {
-            for ($y=0;$y<9;$y++)
+            for ($y=0;$y<8;$y++)
             {
                 $this->newX = $x;
                 $this->newY = $y;

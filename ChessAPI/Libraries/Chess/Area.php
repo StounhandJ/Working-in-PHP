@@ -20,8 +20,10 @@ class Area
             if ($mas["coordinates"][0] == $x && $mas["coordinates"][1] == $y)
             {
                 unset($this->area[$key]);
+                break;
             }
         }
+        sort($this->area);
     }
 
     function movePiece($oldX, $oldY, $newX, $newY)
@@ -32,12 +34,13 @@ class Area
             {
                 $this->area[$key]["coordinates"][0] = $newX;
                 $this->area[$key]["coordinates"][1] = $newY;
+                break;
             }
         }
     }
 
     function checkWhoGoCage($oldX, $oldY, $x, $y, $player){
-        foreach ($this->area as $key=>$mas) {
+        foreach ($this->area as $mas) {
             if ($mas["player"] != $player)
             {
                 $path = '\Libraries\Chess\Figure\\'.$mas["chessPiece"];
@@ -64,6 +67,7 @@ class Area
             if ($mas["chessPiece"] == "King" and $mas["player"] == $player)
             {
                 $king = $mas["coordinates"];
+                break;
             }
         }
 

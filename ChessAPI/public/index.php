@@ -43,6 +43,7 @@ $app->group('/api', function (RouteCollectorProxy $group) {
     $group->get('',"\Controller\apiController:index");
     $group->get('/creatGame',"\Controller\apiController:creatGame");
     $group->get('/GameInfo',"\Controller\apiController:GameInfo");
+    $group->get('/getPossibleMoves',"\Controller\apiController:getPossibleMoves");
     $group->post('/moveFigure',"\Controller\apiController:moveFigure");
 });
 

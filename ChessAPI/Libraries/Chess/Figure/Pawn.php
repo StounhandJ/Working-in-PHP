@@ -8,7 +8,7 @@ class Pawn extends \Libraries\Chess\ChessPiece
     {
         $interim = $this->oldY - $this->newY;
         $posX = abs($this->oldX - $this->newX);
-        $posY = $interim < 0?$interim * -1 : $interim;
+        $posY = abs($interim);
         $EnemyFigure = $this->checkEnemyFigure($this->newX, $this->newY);
         $direction = (($this->player == 1 && $interim < 0) or ($this->player == 2 && $interim > 0));
         if (
