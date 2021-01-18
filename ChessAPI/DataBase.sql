@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Янв 17 2021 г., 22:47
+-- Время создания: Янв 18 2021 г., 18:09
 -- Версия сервера: 5.7.30-33
 -- Версия PHP: 5.6.40
 
@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `Games` (
   `playerOne` varchar(320) NOT NULL,
   `playerTwo` varchar(320) NOT NULL,
   `area` json NOT NULL,
+  `log` json NOT NULL,
   `turn` int(1) NOT NULL DEFAULT '1',
   `update_date` int(11) UNSIGNED NOT NULL,
   `create_date` int(11) UNSIGNED NOT NULL,
