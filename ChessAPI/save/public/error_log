@@ -1,0 +1,481 @@
+[05-Nov-2020 15:18:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function withHeader() on null in C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\public\index.php:41
+Stack trace:
+#0 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), NULL, Array)
+#1 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\vendor\slim\slim\Slim\Routing\Route.php(341): Slim in C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\public\index.php on line 41
+[05-Nov-2020 15:18:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function withHeader() on null in C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\public\index.php:41
+Stack trace:
+#0 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), NULL, Array)
+#1 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\vendor\slim\slim\Slim\Routing\Route.php(341): Slim in C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\public\index.php on line 41
+[05-Nov-2020 15:45:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Controller\AppFactory() in C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\Controller\apiController.php:19
+Stack trace:
+#0 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\Controller\AController.php(23): Controller\apiController->test()
+#1 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\public\index.php(38): Controller\AController->run()
+#2 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#5 C:\Us in C:\Users\79096\Desktop\github\Working-in-PHP\TimetableMPT\Controller\apiController.php on line 19
+[05-Nov-2020 15:57:57 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php72\sess_ae6425f6fac056c91b97129fd097ee73, O_RDWR) failed: No such file or directory (2) in C:\Users\79096\Desktop\github\online-store\public\index.php on line 7
+[05-Nov-2020 15:57:57 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php72) in C:\Users\79096\Desktop\github\online-store\public\index.php on line 7
+[05-Nov-2020 15:59:12 UTC] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to {closure}() must be an instance of Psr\Http\Message\ResponseInterface, instance of Slim\Routing\RouteRunner given, called in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php on line 283 and defined in C:\Users\79096\Desktop\github\online-store\public\index.php:35
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(283): {closure}(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(62): Slim\App- in C:\Users\79096\Desktop\github\online-store\public\index.php on line 35
+[05-Nov-2020 16:03:01 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php72\sess_ae6425f6fac056c91b97129fd097ee73, O_RDWR) failed: No such file or directory (2) in C:\Users\79096\Desktop\github\online-store\public\index.php on line 7
+[05-Nov-2020 16:03:01 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php72) in C:\Users\79096\Desktop\github\online-store\public\index.php on line 7
+[05-Nov-2020 16:06:36 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php72\sess_ae6425f6fac056c91b97129fd097ee73, O_RDWR) failed: No such file or directory (2) in C:\Users\79096\Desktop\github\online-store\public\index.php on line 7
+[05-Nov-2020 16:06:36 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php72) in C:\Users\79096\Desktop\github\online-store\public\index.php on line 7
+[05-Nov-2020 16:07:03 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php72\sess_ae6425f6fac056c91b97129fd097ee73, O_RDWR) failed: No such file or directory (2) in C:\Users\79096\Desktop\github\online-store\public\index.php on line 7
+[05-Nov-2020 16:07:03 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php72) in C:\Users\79096\Desktop\github\online-store\public\index.php on line 7
+[05-Nov-2020 16:10:14 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php72\sess_ae6425f6fac056c91b97129fd097ee73, O_RDWR) failed: No such file or directory (2) in C:\Users\79096\Desktop\github\online-store\public\index.php on line 7
+[05-Nov-2020 16:10:15 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php72) in C:\Users\79096\Desktop\github\online-store\public\index.php on line 7
+[08-Nov-2020 10:29:44 UTC] PHP Warning:  Unknown: php_network_getaddresses: getaddrinfo failed: ���� ���� ����������.  in Unknown on line 0
+[08-Nov-2020 10:29:59 UTC] PHP Fatal error:  Uncaught Error: Class 'GuzzleHttp\Psr7\LazyOpenStream' not found in C:\Users\79096\Desktop\github\online-store\public\index.php:40
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 C:\Use in C:\Users\79096\Desktop\github\online-store\public\index.php on line 40
+[08-Nov-2020 10:29:59 UTC] PHP Fatal error:  Uncaught Error: Class 'GuzzleHttp\Psr7\LazyOpenStream' not found in C:\Users\79096\Desktop\github\online-store\public\index.php:40
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 C:\Use in C:\Users\79096\Desktop\github\online-store\public\index.php on line 40
+[08-Nov-2020 10:30:17 UTC] PHP Fatal error:  Uncaught Error: Class 'LazyOpenStream' not found in C:\Users\79096\Desktop\github\online-store\public\index.php:40
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 C:\Users\79096\Desktop in C:\Users\79096\Desktop\github\online-store\public\index.php on line 40
+[08-Nov-2020 10:32:40 UTC] PHP Warning:  fopen(/Template/Mebel.html): failed to open stream: No such file or directory in C:\Users\79096\Desktop\github\online-store\public\index.php on line 40
+[08-Nov-2020 10:32:40 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Slim\Psr7\Message::withBody() must implement interface Psr\Http\Message\StreamInterface, bool given, called in C:\Users\79096\Desktop\github\online-store\public\index.php on line 41 and defined in C:\Users\79096\Desktop\github\online-store\vendor\slim\psr7\src\Message.php:179
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\public\index.php(41): Slim\Psr7\Message->withBody(false)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\githu in C:\Users\79096\Desktop\github\online-store\vendor\slim\psr7\src\Message.php on line 179
+[08-Nov-2020 10:33:03 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Slim\Psr7\Message::withBody() must implement interface Psr\Http\Message\StreamInterface, resource given, called in C:\Users\79096\Desktop\github\online-store\public\index.php on line 41 and defined in C:\Users\79096\Desktop\github\online-store\vendor\slim\psr7\src\Message.php:179
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\public\index.php(41): Slim\Psr7\Message->withBody(Resource id #91)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096 in C:\Users\79096\Desktop\github\online-store\vendor\slim\psr7\src\Message.php on line 179
+[08-Nov-2020 10:39:35 UTC] PHP Warning:  fopen(C:\Users\79096\Desktop\github\online-store\public/../Template/Mebel.html): failed to open stream: No such file or directory in C:\Users\79096\Desktop\github\online-store\public\index.php on line 40
+[08-Nov-2020 10:39:35 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Slim\Psr7\Message::withBody() must implement interface Psr\Http\Message\StreamInterface, bool given, called in C:\Users\79096\Desktop\github\online-store\public\index.php on line 41 and defined in C:\Users\79096\Desktop\github\online-store\vendor\slim\psr7\src\Message.php:179
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\public\index.php(41): Slim\Psr7\Message->withBody(false)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\githu in C:\Users\79096\Desktop\github\online-store\vendor\slim\psr7\src\Message.php on line 179
+[08-Nov-2020 11:05:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Libraries' not found in C:\Users\79096\Desktop\github\online-store\public\index.php:39
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 C:\Users\79096\Desktop\gith in C:\Users\79096\Desktop\github\online-store\public\index.php on line 39
+[08-Nov-2020 11:23:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function request() on null in C:\Users\79096\Desktop\github\online-store\Model\ListGoods.php:16
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\Controller\indexController.php(20): Model\ListGoods->getGoods()
+#1 C:\Users\79096\Desktop\github\online-store\Controller\AController.php(23): Controller\indexController->index()
+#2 C:\Users\79096\Desktop\github\online-store\public\index.php(41): Controller\AController->run()
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#5 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+# in C:\Users\79096\Desktop\github\online-store\Model\ListGoods.php on line 16
+[08-Nov-2020 11:24:19 UTC] PHP Warning:  Use of undefined constant err - assumed 'err' (this will throw an Error in a future version of PHP) in C:\Users\79096\Desktop\github\online-store\Model\ListGoods.php on line 17
+[08-Nov-2020 11:35:00 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(56): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[08-Nov-2020 11:40:59 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in C:\Users\79096\Desktop\github\online-store\Controller\indexController.php on line 23
+[08-Nov-2020 11:49:45 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE) in C:\Users\79096\Desktop\github\online-store\Controller\indexController.php on line 25
+[08-Nov-2020 11:58:39 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(65): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[08-Nov-2020 11:58:46 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(65): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[08-Nov-2020 11:59:21 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(65): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[08-Nov-2020 13:01:36 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\Users\79096\Desktop\github\online-store\public\index.php:32
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(127): {closure}(Object(Slim\Psr7\Request), Object(ArgumentCountError), true, true, true)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(109): Slim\Middleware\ErrorMiddleware->handleException(Object(Slim\Psr7\Request), Object(ArgumentCountError))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(140): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 C:\Use in C:\Users\79096\Desktop\github\online-store\public\index.php on line 32
+[08-Nov-2020 13:01:49 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\Users\79096\Desktop\github\online-store\public\index.php:32
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(127): {closure}(Object(Slim\Psr7\Request), Object(ArgumentCountError), true, true, true)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(109): Slim\Middleware\ErrorMiddleware->handleException(Object(Slim\Psr7\Request), Object(ArgumentCountError))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(140): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 C:\Use in C:\Users\79096\Desktop\github\online-store\public\index.php on line 32
+[08-Nov-2020 13:02:21 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\Users\79096\Desktop\github\online-store\public\index.php:32
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(127): {closure}(Object(Slim\Psr7\Request), Object(ArgumentCountError), true, true, true)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(109): Slim\Middleware\ErrorMiddleware->handleException(Object(Slim\Psr7\Request), Object(ArgumentCountError))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(140): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 C:\Use in C:\Users\79096\Desktop\github\online-store\public\index.php on line 32
+[08-Nov-2020 13:05:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function group() on null in C:\Users\79096\Desktop\github\online-store\public\index.php:38
+Stack trace:
+#0 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\public\index.php on line 38
+[08-Nov-2020 13:06:05 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Controller\indexController::__construct(), 2 passed in C:\Users\79096\Desktop\github\online-store\Controller\AController.php on line 17 and exactly 3 expected in C:\Users\79096\Desktop\github\online-store\Controller\indexController.php:11
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\Controller\AController.php(17): Controller\indexController->__construct(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response))
+#1 C:\Users\79096\Desktop\github\online-store\public\index.php(41): Controller\AController->set('index', 'index', Object(Slim\Psr7\Request), Object(Slim\Psr7\Response))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), in C:\Users\79096\Desktop\github\online-store\Controller\indexController.php on line 11
+[08-Nov-2020 13:06:27 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Controller\indexController::__construct(), 2 passed in C:\Users\79096\Desktop\github\online-store\Controller\AController.php on line 17 and exactly 3 expected in C:\Users\79096\Desktop\github\online-store\Controller\indexController.php:11
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\Controller\AController.php(17): Controller\indexController->__construct(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response))
+#1 C:\Users\79096\Desktop\github\online-store\public\index.php(41): Controller\AController->set('index', 'index', Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Re in C:\Users\79096\Desktop\github\online-store\Controller\indexController.php on line 11
+[08-Nov-2020 13:08:59 UTC] PHP Warning:  require(C:\Users\79096\Desktop\github\online-store\Templateheader.php): failed to open stream: No such file or directory in C:\Users\79096\Desktop\github\online-store\Template\index.php on line 2
+[08-Nov-2020 13:08:59 UTC] PHP Fatal error:  require(): Failed opening required 'C:\Users\79096\Desktop\github\online-store\Templateheader.php' (include_path='.;C:\php\pear') in C:\Users\79096\Desktop\github\online-store\Template\index.php on line 2
+[08-Nov-2020 13:09:16 UTC] PHP Warning:  require(C:\Users\79096\Desktop\github\online-store\Templateheader.php): failed to open stream: No such file or directory in C:\Users\79096\Desktop\github\online-store\Template\index.php on line 3
+[08-Nov-2020 13:09:16 UTC] PHP Fatal error:  require(): Failed opening required 'C:\Users\79096\Desktop\github\online-store\Templateheader.php' (include_path='.;C:\php\pear') in C:\Users\79096\Desktop\github\online-store\Template\index.php on line 3
+[08-Nov-2020 16:17:57 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in C:\Users\79096\Desktop\github\online-store\public\index.php on line 8
+[08-Nov-2020 16:22:43 UTC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION), expecting ';' or ',' in C:\Users\79096\Desktop\github\online-store\public\index.php on line 10
+[08-Nov-2020 17:06:05 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(80): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[08-Nov-2020 17:06:22 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(80): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[08-Nov-2020 17:06:33 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(80): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[08-Nov-2020 17:07:02 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(80): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[08-Nov-2020 17:07:40 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(80): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[08-Nov-2020 17:07:47 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(80): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[08-Nov-2020 17:08:02 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(80): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[08-Nov-2020 17:08:15 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(80): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[08-Nov-2020 17:09:03 UTC] PHP Warning:  setcookie() expects parameter 2 to be string, array given in C:\Users\79096\Desktop\github\online-store\Controller\apiController.php on line 20
+[08-Nov-2020 17:26:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\79096\Desktop\github\online-store\public\index.php:9) in C:\Users\79096\Desktop\github\online-store\Controller\apiController.php on line 20
+[08-Nov-2020 17:42:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\79096\Desktop\github\online-store\Controller\apiController.php:22) in C:\Users\79096\Desktop\github\online-store\Controller\apiController.php on line 23
+[08-Nov-2020 17:46:15 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\Users\79096\Desktop\github\online-store\Controller\apiController.php on line 19
+[08-Nov-2020 17:46:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\79096\Desktop\github\online-store\Controller\apiController.php:19) in C:\Users\79096\Desktop\github\online-store\Controller\apiController.php on line 21
+[08-Nov-2020 17:46:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\79096\Desktop\github\online-store\Controller\apiController.php:19) in C:\Users\79096\Desktop\github\online-store\Controller\apiController.php on line 24
+[10-Nov-2020 10:11:33 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in C:\Users\79096\Desktop\github\online-store\Controller\adminController.php on line 31
+[10-Nov-2020 10:11:47 UTC] PHP Parse error:  syntax error, unexpected 'setcookie' (T_STRING) in C:\Users\79096\Desktop\github\online-store\Controller\adminController.php on line 46
+[10-Nov-2020 10:15:38 UTC] PHP Fatal error:  Uncaught RuntimeException: Named route does not exist for name: admin/login in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteCollector.php:231
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteParser.php(51): Slim\Routing\RouteCollector->getNamedRoute('admin/login')
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteParser.php(115): Slim\Routing\RouteParser->relativeUrlFor('admin/login', Array, Array)
+#2 C:\Users\79096\Desktop\github\online-store\Controller\adminController.php(19): Slim\Routing\RouteParser->urlFor('admin/login')
+#3 C:\Users\79096\Desktop\github\online-store\Controller\AController.php(24): Controller\adminController->Test()
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(102): Controller\AController->run()
+#5 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Resp in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteCollector.php on line 231
+[10-Nov-2020 10:15:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Controller\AppFactory() in C:\Users\79096\Desktop\github\online-store\Controller\adminController.php:13
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\Controller\AController.php(17): Controller\adminController->__construct(NULL, NULL)
+#1 C:\Users\79096\Desktop\github\online-store\public\index.php(101): Controller\AController->set('admin', 'Test', Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#5 C:\Users\79096\Desktop\github\online-store\vendor\s in C:\Users\79096\Desktop\github\online-store\Controller\adminController.php on line 13
+[10-Nov-2020 10:16:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function AppFactory() in C:\Users\79096\Desktop\github\online-store\Controller\adminController.php:13
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\Controller\AController.php(17): Controller\adminController->__construct(NULL, NULL)
+#1 C:\Users\79096\Desktop\github\online-store\public\index.php(101): Controller\AController->set('admin', 'Test', Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#5 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Sl in C:\Users\79096\Desktop\github\online-store\Controller\adminController.php on line 13
+[10-Nov-2020 10:16:34 UTC] PHP Fatal error:  Uncaught RuntimeException: Named route does not exist for name: admin/login in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteCollector.php:231
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteParser.php(51): Slim\Routing\RouteCollector->getNamedRoute('admin/login')
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteParser.php(115): Slim\Routing\RouteParser->relativeUrlFor('admin/login', Array, Array)
+#2 C:\Users\79096\Desktop\github\online-store\Controller\adminController.php(19): Slim\Routing\RouteParser->urlFor('admin/login')
+#3 C:\Users\79096\Desktop\github\online-store\Controller\AController.php(24): Controller\adminController->Test()
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(102): Controller\AController->run()
+#5 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Resp in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteCollector.php on line 231
+[10-Nov-2020 10:21:48 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getRouteCollector() on null in C:\Users\79096\Desktop\github\online-store\public\index.php:100
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5  in C:\Users\79096\Desktop\github\online-store\public\index.php on line 100
+[10-Nov-2020 10:22:12 UTC] PHP Fatal error:  Uncaught RuntimeException: Named route does not exist for name: admin/login in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteCollector.php:231
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteParser.php(51): Slim\Routing\RouteCollector->getNamedRoute('admin/login')
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteParser.php(115): Slim\Routing\RouteParser->relativeUrlFor('admin/login', Array, Array)
+#2 C:\Users\79096\Desktop\github\online-store\public\index.php(102): Slim\Routing\RouteParser->urlFor('admin/login')
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Respons in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteCollector.php on line 231
+[10-Nov-2020 10:22:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function AppFactory() in C:\Users\79096\Desktop\github\online-store\public\index.php:100
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 C:\Users\79096 in C:\Users\79096\Desktop\github\online-store\public\index.php on line 100
+[10-Nov-2020 10:27:45 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\Users\79096\Desktop\github\online-store\public\index.php:100
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 C:\Users\79096\ in C:\Users\79096\Desktop\github\online-store\public\index.php on line 100
+[10-Nov-2020 10:29:18 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(102): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[10-Nov-2020 15:54:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Slim\Factory\AppFactory::getRouteCollector() in C:\Users\79096\Desktop\github\online-store\Controller\adminController.php:17
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\Controller\AController.php(24): Controller\adminController->Test()
+#1 C:\Users\79096\Desktop\github\online-store\public\index.php(102): Controller\AController->run()
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#5 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middle in C:\Users\79096\Desktop\github\online-store\Controller\adminController.php on line 17
+[10-Nov-2020 16:03:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Slim\App::urlFor() in C:\Users\79096\Desktop\github\online-store\public\index.php:112
+Stack trace:
+#0 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\public\index.php on line 112
+[10-Nov-2020 16:03:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getRouteCollector() on null in C:\Users\79096\Desktop\github\online-store\public\index.php:100
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5  in C:\Users\79096\Desktop\github\online-store\public\index.php on line 100
+[10-Nov-2020 16:04:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getRouteCollector() on null in C:\Users\79096\Desktop\github\online-store\public\index.php:100
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5  in C:\Users\79096\Desktop\github\online-store\public\index.php on line 100
+[12-Nov-2020 13:13:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getRouteCollector() on null in C:\Users\79096\Desktop\github\online-store\public\index.php:132
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): {closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5  in C:\Users\79096\Desktop\github\online-store\public\index.php on line 132
+[12-Nov-2020 13:22:05 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpMethodNotAllowedException: Method not allowed. Must be one of: GET in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:96
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(150): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 96
+[12-Nov-2020 13:23:32 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpMethodNotAllowedException: Method not allowed. Must be one of: GET in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:96
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(150): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 96
+[12-Nov-2020 13:26:19 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(150): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[12-Nov-2020 13:26:32 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(150): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[12-Nov-2020 13:26:33 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(150): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[12-Nov-2020 13:27:53 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpNotFoundException: Not found. in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:93
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(150): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 93
+[12-Nov-2020 13:30:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\79096\Desktop\github\online-store\Controller\adminController.php:46) in C:\Users\79096\Desktop\github\online-store\Libraries\View.php on line 20
+[12-Nov-2020 13:30:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\79096\Desktop\github\online-store\Controller\adminController.php:45) in C:\Users\79096\Desktop\github\online-store\Libraries\View.php on line 20
+[12-Nov-2020 13:30:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\79096\Desktop\github\online-store\Controller\adminController.php:45) in C:\Users\79096\Desktop\github\online-store\Libraries\View.php on line 20
+[12-Nov-2020 13:30:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\79096\Desktop\github\online-store\Controller\adminController.php:45) in C:\Users\79096\Desktop\github\online-store\Libraries\View.php on line 20
+[12-Nov-2020 13:30:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\79096\Desktop\github\online-store\Controller\adminController.php:45) in C:\Users\79096\Desktop\github\online-store\Libraries\View.php on line 20
+[12-Nov-2020 13:31:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\79096\Desktop\github\online-store\Controller\adminController.php:45) in C:\Users\79096\Desktop\github\online-store\Libraries\View.php on line 20
+[12-Nov-2020 13:31:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\79096\Desktop\github\online-store\Controller\adminController.php:45) in C:\Users\79096\Desktop\github\online-store\Libraries\View.php on line 20
+[12-Nov-2020 13:31:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\79096\Desktop\github\online-store\Controller\adminController.php:45) in C:\Users\79096\Desktop\github\online-store\Libraries\View.php on line 20
+[12-Nov-2020 13:31:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\79096\Desktop\github\online-store\Controller\adminController.php:45) in C:\Users\79096\Desktop\github\online-store\Libraries\View.php on line 20
+[13-Nov-2020 12:04:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\79096\Desktop\github\online-store\Template\Admin\Add-mebel.php on line 34
+[13-Nov-2020 12:05:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\79096\Desktop\github\online-store\Template\Admin\Add-mebel.php on line 34
+[13-Nov-2020 12:05:10 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\79096\Desktop\github\online-store\Template\Admin\Add-mebel.php on line 34
+[13-Nov-2020 12:05:54 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\79096\Desktop\github\online-store\Template\Admin\Add-mebel.php on line 35
+[13-Nov-2020 12:05:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\79096\Desktop\github\online-store\Template\Admin\Add-mebel.php on line 35
+[13-Nov-2020 12:12:26 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpMethodNotAllowedException: Method not allowed. Must be one of: GET in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:96
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(177): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 96
+[13-Nov-2020 12:12:50 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpMethodNotAllowedException: Method not allowed. Must be one of: GET in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:96
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(177): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 96
+[13-Nov-2020 12:12:55 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpMethodNotAllowedException: Method not allowed. Must be one of: GET in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:96
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(177): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 96
+[13-Nov-2020 12:13:31 UTC] PHP Fatal error:  Uncaught Slim\Exception\HttpMethodNotAllowedException: Method not allowed. Must be one of: GET in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php:96
+Stack trace:
+#0 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Routing\RouteRunner.php(72): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#3 C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#4 C:\Users\79096\Desktop\github\online-store\public\index.php(177): Slim\App->run()
+#5 {main}
+  thrown in C:\Users\79096\Desktop\github\online-store\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php on line 96
