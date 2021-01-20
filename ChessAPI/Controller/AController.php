@@ -1,6 +1,7 @@
 <?php
 namespace Controller;
 
+use Model\ChessDB;
 use Slim\Psr7\Request;
 use Slim\Psr7\Response;
 use Libraries\View;
@@ -17,10 +18,15 @@ class AController
    */
   protected $response;
 
-  /**
-   * @var View
-   */
-  public $view;
+    /**
+     * @var ChessDB
+     */
+    public $ChessDB;
+
+    /**
+     * @var View
+     */
+    public $view;
 
   /**
    * @var array
@@ -77,6 +83,7 @@ class AController
   	$this->set_request($request);
   	$this->set_response($response);
   	$this->view = new View($this->response);
+  	$this->ChessDB = new ChessDB();
   }
 
 }

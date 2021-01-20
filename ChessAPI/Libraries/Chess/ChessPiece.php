@@ -42,7 +42,7 @@ class ChessPiece implements Interfaces\ChessPieceInterface
         $this->newX = 0;
         $this->newY = 0;
         $this->player = $player;
-        $this->Area = new \Libraries\Chess\Area($area);
+        $this->Area = new Area($area);
     }
 
 
@@ -172,7 +172,7 @@ class ChessPiece implements Interfaces\ChessPieceInterface
 
     function checkShahGame(): bool
     {
-        $areaL = $this->Area;
+        $areaL = clone $this->Area;
         if ($this->checkEnemyFigure($this->newX, $this->newY)){$areaL->deletePiece($this->newX, $this->newY);}
         $areaL->movePiece($this->oldX, $this->oldY, $this->newX, $this->newY);
         $areaL->checkEnd($this->player);

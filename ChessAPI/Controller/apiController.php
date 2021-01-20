@@ -1,26 +1,16 @@
 <?php
 namespace Controller;
 
-use Model\ChessDB;
-use Libraries\View;
+
+use Libraries\Chess\Area;
 
 class apiController extends AController
 {
 
-    /**
-     * @var ChessDB
-     */
-    public $ChessDB;
-
-    /**
-     * @var View
-     */
-    public $view;
 
     function __call($name, $args)
     {
         $this->before($args[0], $args[1]);
-        $this->ChessDB = new ChessDB();
         return $this->{$name}();
     }
 
@@ -65,7 +55,7 @@ class apiController extends AController
 
         if (!$this->ChessDB->checkTurn($this->POST["gameID"],$player)) return $this->view->renderingAPI(["code"=>403,"mes"=>"Ход другого игрока"]);
         $data = $this->ChessDB->getGame($this->POST["gameID"])["data"];
-        $area = new \Libraries\Chess\Area($data["area"]);
+        $area = new Area($data["area"]);
 
         $figure = $area->getFigure($oldX,$oldY);
 
@@ -75,11 +65,12 @@ class apiController extends AController
         if ($figure->move($newX,$newY))
         {
             $data["log"][] = ["player"=>$player,"from"=>[$oldX,$oldY],"to"=>[$newX,$newY],"date"=>time()];
-            $this->ChessDB->updateGame($this->POST["gameID"],$figure->Area->area,$data["log"],$player);
+            $this->ChessDB->updateGame($this->POST["gameID"],$figure->Area->area,$data["log"],$player,$figure->Area->event);
             $respond = ["code"=>200,"mes"=>"Успешно"];
         }
         else $respond = ["code"=>403,"mes"=>"Неудача"];
         $respond["area"] = $this->ChessDB->getGame($this->POST["gameID"])["data"]["area"];
+        $respond["event"] = $figure->Area->event;
         return $this->view->renderingAPI($respond);
     }
 
@@ -99,7 +90,7 @@ class apiController extends AController
         else return $this->view->renderingAPI(["code"=>1,"mes"=>"Преданны не все параметры"]);
 
         $data = $this->ChessDB->getGame($this->GET["gameID"])["data"];
-        $area = new \Libraries\Chess\Area($data["area"]);
+        $area = new Area($data["area"]);
         $figure = $area->getFigure($x,$y);
         if(empty($figure)) return $this->view->renderingAPI(["code"=>404,"mes"=>"В данной позиции нет фигуры"]);
         $possibleMoves = $figure->getPossibleMoves();
