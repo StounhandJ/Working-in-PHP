@@ -3,6 +3,7 @@
         "slim/slim": "4.*",
         "slim/psr7": "^1.2",
       "ext-pdo": "*",
-      "ext-http": "*"
+      "ext-http": "*",
+      "ext-memcache": "*"
     }
 }

@@ -26,9 +26,14 @@ class apiController extends AController
     protected function GameInfo()
     {
         if (!isset($this->GET["gameID"])) return $this->view->renderingAPI(["code"=>1,"mes"=>"Преданны не все параметры"]);
+        if ($this->isCache($keyCache = "GameInfo{$this->GET['gameID']}"))
+        {
+            return $this->view->renderingAPI($this->getCache($keyCache));
+        }
         $data = $this->ChessDB->getGame($this->GET["gameID"]);
-        if (!$data["success"]) return $this->view->renderingAPI(["code"=>404,"mes"=>"Игра с таким id не найдена"]);
-        return $this->view->renderingAPI(["code"=>200,"mes"=>"Успех","data"=>$data["data"]]);
+        $responseData = $data["success"]?["code"=>200,"mes"=>"Успех","data"=>$data["data"]]:["code"=>404,"mes"=>"Игра с таким id не найдена"];
+        $this->setCache($keyCache,$responseData,5);
+        return $this->view->renderingAPI($responseData);
     }
 
     protected function moveFigure()
@@ -89,12 +94,16 @@ class apiController extends AController
         }
         else return $this->view->renderingAPI(["code"=>1,"mes"=>"Преданны не все параметры"]);
 
+        if ($this->isCache($keyCache = "getPossibleMoves{$this->GET['gameID']}x{$x}x{$y}"))
+        {
+            return $this->view->renderingAPI($this->getCache($keyCache));
+        }
         $data = $this->ChessDB->getGame($this->GET["gameID"])["data"];
         $area = new Area($data["area"]);
         $figure = $area->getFigure($x,$y);
         if(empty($figure)) return $this->view->renderingAPI(["code"=>404,"mes"=>"В данной позиции нет фигуры"]);
         $possibleMoves = $figure->getPossibleMoves();
-
-        return $this->view->renderingAPI(["code"=>200,"mes"=>"Успех","data"=>["x"=>$x,"y"=>$y,"possibleMoves"=>$possibleMoves]]);
+        $this->setCache($keyCache,$responseData = ["code"=>200,"mes"=>"Успех","data"=>["x"=>$x,"y"=>$y,"possibleMoves"=>$possibleMoves]],3);
+        return $this->view->renderingAPI($responseData);
     }
 }

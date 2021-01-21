@@ -1,12 +1,13 @@
 <?php
 namespace Controller;
 
+use Memcache;
 use Model\ChessDB;
 use Slim\Psr7\Request;
 use Slim\Psr7\Response;
 use Libraries\View;
 
-class AController
+abstract class AController
 {
     /**
    * @var Request
@@ -22,6 +23,11 @@ class AController
      * @var ChessDB
      */
     public $ChessDB;
+
+    /**
+     * @var Memcache
+     */
+    public $memcache;
 
     /**
      * @var View
@@ -52,6 +58,12 @@ class AController
    * @var array
    */
   public $SERVER;
+
+  function __construct()
+  {
+      $this->ChessDB = new ChessDB();
+      $this->memcache= new Memcache;
+  }
   
   function set_request($request)
   {
@@ -77,13 +89,26 @@ class AController
   {
   	return $this->response;
   }
+
+  function isCache($key):bool
+  {
+      return $this->memcache->get($key)!=false;
+  }
+
+  function setCache($key, $data, $time)
+  {
+      $this->memcache->set($key,$data,MEMCACHE_COMPRESSED, $time);
+  }
+  function getCache($key)
+  {
+      return $this->memcache->get($key);
+  }
   
   function before($request, $response)
   {
   	$this->set_request($request);
   	$this->set_response($response);
   	$this->view = new View($this->response);
-  	$this->ChessDB = new ChessDB();
   }
 
 }

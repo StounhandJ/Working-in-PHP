@@ -5,7 +5,6 @@ use Slim\Routing\RouteCollectorProxy;
 use Slim\Factory\AppFactory;
 require __DIR__ . '/../vendor/autoload.php';
 
-session_start();
 $app = AppFactory::create();
         //---------Подключение классов---------//
 function autoload ($class) { //Загрузка файлов

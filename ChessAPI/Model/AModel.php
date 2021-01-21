@@ -3,7 +3,7 @@ namespace model;
 
 use Libraries\DataBase;
 
-class AModel  //главный класс модели
+abstract class AModel  //главный класс модели
 {
     /**
      * @var DataBase

@@ -2,7 +2,7 @@
 namespace Libraries\Chess;
 
 
-class ChessPiece implements Interfaces\ChessPieceInterface
+abstract class ChessPiece implements Interfaces\ChessPieceInterface
 {
     /**
      * @var int
@@ -179,9 +179,5 @@ class ChessPiece implements Interfaces\ChessPieceInterface
         return $areaL->event != "";
     }
 
-    public function check($CheckShah = True): bool
-    {
-        return false;
-        // TODO: Implement check() method.
-    }
+    abstract public function check($CheckShah = True): bool;
 }
