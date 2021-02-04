@@ -92,7 +92,7 @@ class Area implements Interfaces\AreaInterface
 
         foreach ($this->area as $mas)
         {
-            if ($mas["chessPiece"] != "King" and $mas["player"] != $player)
+            if ($mas["player"] != $player)
             {
                 $path = '\Libraries\Chess\Figure\\'.$mas["chessPiece"];
                 $figure = new $path($mas["coordinates"][0], $mas["coordinates"][1], $mas["player"],$this->area);  // Сделать клонирование area
