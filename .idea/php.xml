@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/ChessAPI/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/ChessAPI/vendor/composer" />
+      <path value="$PROJECT_DIR$/ChessAPI/vendor/fig/http-message-util" />
+      <path value="$PROJECT_DIR$/ChessAPI/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/ChessAPI/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/ChessAPI/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/ChessAPI/vendor/slim/psr7" />
+      <path value="$PROJECT_DIR$/ChessAPI/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/ChessAPI/vendor/slim/slim" />
+      <path value="$PROJECT_DIR$/ChessAPI/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/ChessAPI/vendor/psr/http-server-handler" />
+      <path value="$PROJECT_DIR$/ChessAPI/vendor/psr/http-server-middleware" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.1">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+</project>

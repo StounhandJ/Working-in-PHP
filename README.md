@@ -1,8 +1,13 @@
-Практичка в написание сайтов на PHP с использованием фреймворков и без них.
+Тестовые задания в команды [ВК](https://vk.com/jobs)
 -----------------------------------
+### 1. [groupsVK](groupsVK), [DungeonAPI](DungeonAPI) - Тестовые задания в команды ВК
+### 2. [ChessAPI](ChessAPI) - Шахматный API
+### 3. [Форум](Форум) - Небольшой форум без использования фреймворка. 
+### 4. [Расписание](TimetableMPT), [scheduleVKbot](scheduleVKbot) - Проверка незавершенных проектов. И личные проекты на PHP
 ***  
-Practice in writing websites in PHP using frameworks and without them.
+Test tasks for [VK](https://vk.com/jobs) teams and personal projects in PHP
 -----------------------------------
-### 1. [ChessAPI](https://github.com/StounhandJ/Working-in-PHP/tree/master/ChessAPI) (In the development)
-### 2. [Forum](https://github.com/StounhandJ/Working-in-PHP/tree/master/Forum) - A small forum without using the framework. The admin panel is not finished.
-### 3. [TimetableMPT](https://github.com/StounhandJ/Working-in-PHP/tree/master/TimetableMPT), [scheduleVKbot](https://github.com/StounhandJ/Working-in-PHP/tree/master/scheduleVKbot) - Test of unfinished projects.
+### 1. [groupsVK](groupsVK), [DungeonAPI](DungeonAPI) - Test tasks for VK teams
+### 2. [ChessAPI](ChessAPI) - Chess API
+### 3. [Forum](Forum) - A small forum without using a framework.
+### 4. [Schedule](TimetableMPT), [scheduleVKbot](scheduleVKbot) - Checking for incomplete projects. And personal projects in PHP

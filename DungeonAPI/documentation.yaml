@@ -1,0 +1,170 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Dungeon
+
+# basePath: /api
+tags:
+  - name: Dungeon
+schemes:
+  - https
+  - http
+paths:
+  /create:
+    post:
+      tags:
+        - Dungeon
+      summary: Create new game
+      description: ''
+      parameters:
+        - name: area
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Area'
+        - name: x
+          in: query
+          type: integer
+          description: "player's starting position by X"
+        - name: y
+          in: query
+          type: integer
+          description: "player's starting position by Y"
+      responses:
+        '200':
+          description: successful operation
+          schema:
+              type: object
+              properties:
+                data:
+                  $ref: '#/definitions/Game'
+        '400':
+          description: wrong area
+  /starting:
+    post:
+      tags:
+        - Dungeon
+      summary: Puts the player in the starting room
+      parameters:
+        - name: x
+          in: query
+          required: true
+          type: integer
+          description: "player's starting position by X"
+        - name: y
+          in: query
+          required: true
+          type: integer
+          description: "player's starting position by Y"
+      responses:
+        '200':
+          description: successful operation
+          schema:
+              type: object
+              properties:
+                data:
+                  $ref: '#/definitions/Game'
+        '400':
+          description: Invalid player position
+        '403':
+          description: The player's starting position is already set
+        '404':
+          description: Game not found
+  /info:
+    get:
+      tags:
+        - Dungeon
+      summary: Get game info
+      responses:
+        '200':
+          description: successful operation
+          schema:
+              type: object
+              properties:
+                data:
+                  $ref: '#/definitions/Game'
+        '404':
+          description: Game not found
+  /move:
+    post:
+      tags:
+        - Dungeon
+      summary: Moves the player to a room
+      parameters:
+        - name: x
+          in: query
+          required: true
+          type: integer
+        - name: y
+          in: query
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  event:
+                    $ref: '#/definitions/Event'
+                  game:
+                    $ref: '#/definitions/Game'
+        '400':
+          description: Invalid player position (the room does not exist or it is not adjacent)
+        '403':
+          description: The game is over
+        '404':
+          description: Game not found
+
+definitions:
+  Game:
+    type: object
+    properties:
+      points:
+        type: integer
+      x:
+        type: integer
+        description: "player's current position by X"
+      y:
+        type: integer
+        description: "player's current position by Y"
+      area:
+        type: array
+        items:
+          $ref: '#/definitions/Area'
+      IsEnd:
+        type: boolean
+      
+  
+  Area:
+    type: array
+    items:
+      $ref: '#/definitions/Room'
+      
+  Room:
+    type: object
+    properties:
+      x:
+        type: integer
+        description: "room position by X"
+      y:
+        type: integer
+        description: "room position by Y"
+      type:
+        type: integer
+        description: "1 - room with a chest\n2 - room with a monster\n3 - empty room\n4 - exit room"
+        minimum: 1
+        maximum: 4
+  Event:
+    type: object
+    properties:
+      points:
+        type: integer
+      mes:
+        type: string
+# Added by API Auto Mocking Plugin
+host: virtserver.swaggerhub.com
+basePath: /StounhandJ/Dungeon/1.0.0
